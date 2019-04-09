@@ -1,0 +1,10 @@
+package rules;
+import com.dean.fact.HelloDto
+dialect  "mvel"
+
+rule "hello"
+    when
+        $h : HelloDto(word == null)
+    then
+        $h.setWord("hello!!!");
+end
